@@ -1,6 +1,6 @@
 ---
-title: "Tuần 10: Nhật ký làm việc"
-date: 2026-07-07
+title: "Nhật ký công việc Tuần 10"
+date: 2026-06-19
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
@@ -8,29 +8,29 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu Tuần 10
 
-- Xây dựng một trình lập lịch hạ tầng tự động để cắt giảm mạnh mẽ các lãng phí hóa đơn cloud runtime[cite: 3, 8].
-- Tạo các logic Lambda hướng sự kiện tự động tạm dừng các hệ thống phát triển khi không hoạt động[cite: 3, 8].
-- Liên kết các phân quyền của công cụ serverless một cách rõ ràng để điều phối các chuyển đổi trạng thái hạ tầng[cite: 3, 8, 10].
+- Xây dựng bộ lập lịch hạ tầng tự động để cắt giảm mạnh mẽ lượng chi phí đám mây lãng phí trong thời gian chạy.
+- Tạo logic Lambda hướng sự kiện để tự động tạm dừng các hệ thống phát triển khi không hoạt động.
+- Liên kết chặt chẽ các ủy quyền của công cụ serverless để điều phối quá trình chuyển đổi trạng thái hạ tầng.
 
-### Các nhiệm vụ đã thực hiện trong tuần
+### Các tác vụ đã thực hiện trong tuần
 
-| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| Ngày | Công việc cụ thể | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 1 | Viết một script tự động sử dụng bộ công cụ Boto3 Python để chuyển đổi các trạng thái hạ tầng dựa trên giá trị thẻ tài nguyên[cite: 8, 10]. | 03/08/2026 | 03/08/2026 | Python Boto3 SDK |
-| 2 | Cấu hình các trình kích hoạt Amazon EventBridge Cron chính xác để khởi chạy các script tự động tại các mốc thời gian cố định[cite: 8]. | 04/08/2026 | 04/08/2026 | EventBridge Scheduling |
-| 3 | Hình thành các execution roles IAM tùy chỉnh cấp cho Lambda các quyền hạn chi tiết để kích hoạt các chuyển đổi trạng thái hạ tầng[cite: 8, 10]. | 05/08/2026 | 05/08/2026 | IAM Least Privilege |
-| 4 | Thực hiện kiểm thử bằng cách kích hoạt thủ công các lịch trình sự kiện và theo dõi trạng thái hệ thống qua CloudWatch[cite: 3, 8]. | 06/08/2026 | 06/08/2026 | CloudWatch Logs Engine |
-| 5 | Kiểm toán các nhật ký hoạt động hóa đơn thời gian thực để đo lường mức giảm chi phí sau khi triển khai trình lập lịch[cite: 5, 8]. | 07/08/2026 | 07/08/2026 | Cost Explorer Dashboard |
+| 1 | Viết tập lệnh tự động sử dụng bộ công cụ Boto3 Python để chuyển đổi trạng thái hạ tầng dựa trên giá trị thẻ tài nguyên. | 19/06/2026 | 19/06/2026 | SDK Python Boto3 |
+| 2 | Cấu hình các trình kích hoạt Cron Amazon EventBridge chính xác để khởi chạy các tập lệnh tự động theo các mốc lịch trình cố định. | 20/06/2026 | 20/06/2026 | Lập lịch EventBridge |
+| 3 | Khởi tạo các vai trò thực thi IAM (IAM execution roles) tùy chỉnh nhằm cấp quyền chi tiết cho Lambda để kích hoạt chuyển đổi trạng thái hạ tầng. | 21/06/2026 | 21/06/2026 | Đặc quyền tối thiểu IAM |
+| 4 | Tiến hành kiểm thử bằng cách kích hoạt lịch trình sự kiện thủ công và theo dõi các trạng thái hệ thống qua CloudWatch. | 22/06/2026 | 22/06/2026 | Công cụ CloudWatch Logs |
+| 5 | Kiểm toán nhật ký hoạt động thanh toán theo thời gian thực để đo lường mức giảm chi phí sau khi triển khai bộ lập lịch. | 23/06/2026 | 23/06/2026 | Bảng điều khiển Cost Explorer |
 
 ### Kết quả đạt được trong Tuần 10
 
-- Triển khai thành công một lịch trình hạ tầng không cần can thiệp thủ công (zero-touch), tự động tắt các máy thử nghiệm ngoài giờ làm việc[cite: 8].
-- Giảm thiểu đáng kể chi phí vận hành hạ tầng sandbox bằng cách loại bỏ lãng phí runtime vào cuối tuần và qua đêm[cite: 8].
-- Thay thế các khóa cá nhân không an toàn bằng cách định tuyến các kiểm soát điều phối qua các instance profile bản địa bảo mật[cite: 10].
-- Duy trì tính linh hoạt của nhà phát triển bằng cách đảm bảo các hộp cát thử nghiệm tự động khởi động lại trước khi ca làm việc buổi sáng bắt đầu[cite: 8].
-- Tạo ra một bản thiết kế tự động hóa tiết kiệm chi phí có thể tái sử dụng, dễ dàng áp dụng cho các thành phần dự án trong tương lai[cite: 8].
+- Triển khai thành công lịch trình hạ tầng tự động hoàn toàn, giúp tự động tạm dừng các máy thử nghiệm ngoài giờ làm việc.
+- Giảm mạnh chi phí vận hành hạ tầng môi trường sandbox bằng cách loại bỏ lãng phí thời gian chạy vào cuối tuần và qua đêm.
+- Thay thế các khóa cá nhân không an toàn bằng cách định tuyến các kiểm soát điều phối qua các profile thực thể gốc an toàn.
+- Duy trì sự linh hoạt của nhà phát triển bằng cách đảm bảo các môi trường sandbox thử nghiệm tự động khởi động lại trước khi ca làm việc buổi sáng bắt đầu.
+- Tạo ra một bản thiết kế tự động hóa tiết kiệm chi phí có thể tái sử dụng, dễ dàng áp dụng cho các thành phần dự án trong tương lai.
 
-### Kế hoạch tuần tới
+### Kế hoạch cho tuần tiếp theo
 
-- Đưa các cơ chế co giãn ngang (horizontal elasticity) và tự động phục hồi vào tầng xử lý.
-- Xây dựng các nhóm tính toán có khả năng phục hồi, cân bằng tải và tự động mở rộng sử dụng EC2 Auto Scaling Groups[cite: 10].
+- Giới thiệu các cơ chế co giãn theo chiều ngang và tự động khôi phục cho tầng xử lý dữ liệu.
+- Xây dựng các nhóm tính toán có khả năng phục hồi, cân bằng tải và tự động mở rộng quy mô bằng EC2 Auto Scaling Groups.

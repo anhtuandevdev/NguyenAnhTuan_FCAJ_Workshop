@@ -1,6 +1,6 @@
 ---
-title: "Tuần 12: Nhật ký làm việc"
-date: 2026-07-07
+title: "Nhật ký công việc Tuần 12"
+date: 2026-07-03
 weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
@@ -8,29 +8,29 @@ pre: " <b> 1.12. </b> "
 
 ### Mục tiêu Tuần 12
 
-- Tập trung hóa việc giám sát trạng thái bảo mật sử dụng các dashboard của AWS Security Hub[cite: 8].
-- Đánh giá tổng thể bố cục giải pháp so với các tiêu chuẩn của khung kiến trúc chuẩn AWS Well-Architected Framework[cite: 8].
-- Hoàn thành các quy trình gỡ bỏ môi trường (teardown) nghiêm ngặt để đảm bảo không tồn đọng các chi phí bất ngờ trên tài khoản[cite: 6].
+- Tập trung hóa việc giám sát trạng thái bảo mật bằng cách sử dụng bảng điều khiển AWS Security Hub.
+- Đánh giá tổng thể kiến trúc giải pháp dựa trên các tiêu chuẩn của AWS Well-Architected Framework chính thức.
+- Hoàn thành quy trình dọn dẹp và hủy bỏ môi trường nghiêm ngặt để đảm bảo không phát sinh chi phí phát sinh ngoài ý muốn trên tài khoản.
 
-### Các nhiệm vụ đã thực hiện trong tuần
+### Các tác vụ đã thực hiện trong tuần
 
-| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| Ngày | Công việc cụ thể | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 1 | Kích hoạt AWS Security Hub để tổng hợp các phát hiện lỗ hổng cấu trúc trên tất cả các thành phần đang hoạt động[cite: 8]. | 17/08/2026 | 17/08/2026 | Security Hub Manual |
-| 2 | Đánh giá các điểm số tuân thủ tự động dựa trên các tiêu chí thực hành tốt nhất để tìm ra các quy tắc truy cập sai cấu hình[cite: 8]. | 18/08/2026 | 18/08/2026 | CIS Benchmarks Guide |
-| 3 | Thắt chặt các cổng mạng bị lộ và siết chặt các kiểm soát truy cập cơ sở dữ liệu lỏng lẻo dựa trên các thông tin từ Security Hub[cite: 8]. | 19/08/2026 | 19/08/2026 | Infrastructure Remediation |
-| 4 | Biên soạn báo cáo tài liệu kỹ thuật cuối cùng chi tiết hóa toàn bộ kiến trúc hệ thống đám mây[cite: 4, 10]. | 20/08/2026 | 20/08/2026 | Project Deliverables |
-| 5 | Thực hiện xóa bỏ môi trường nghiêm ngặt bằng cách hủy các test clusters, các đường dẫn NAT và load balancers để ngăn chặn các chi phí phát sinh[cite: 6]. | 21/08/2026 | 21/08/2026 | AWS Account Management |
+| 1 | Kích hoạt AWS Security Hub để tổng hợp các phát hiện về lỗ hổng cấu trúc trên tất cả các thành phần đang hoạt động. | 03/07/2026 | 03/07/2026 | Cẩm nang Security Hub |
+| 2 | Đánh giá điểm tuân thủ tự động dựa trên các tiêu chí thực hành tốt nhất để tìm ra các quy tắc truy cập sai cấu hình. | 04/07/2026 | 04/07/2026 | Hướng dẫn tiêu chuẩn CIS |
+| 3 | Thắt chặt các cổng mạng bị lộ và siết chặt các kiểm soát truy cập cơ sở dữ liệu lỏng lẻo dựa trên thông tin chi tiết từ Security Hub. | 05/07/2026 | 05/07/2026 | Khắc phục sự cố hạ tầng |
+| 4 | Biên soạn báo cáo tài liệu kỹ thuật cuối cùng chi tiết hóa tổng thể kiến trúc hệ thống đám mây. | 06/07/2026 | 06/07/2026 | Sản phẩm bàn giao dự án |
+| 5 | Thực hiện dọn dẹp môi trường nghiêm ngặt bằng cách hủy bỏ các cụm thử nghiệm, đường dẫn NAT và bộ cân bằng tải để ngăn chặn chi phí phát sinh. | 07/07/2026 | 07/07/2026 | Quản lý tài khoản AWS |
 
 ### Kết quả đạt được trong Tuần 12
 
-- Thiết lập một điểm quan sát bảo mật tập trung duy nhất thay thế cho các bảng điều khiển công cụ rải rác[cite: 8].
-- Khắc phục thành công tất cả các rủi ro lộ lọt mạng có mức độ nghiêm trọng cao trước các giai đoạn đánh giá cuối cùng[cite: 8].
-- Xác nhận rằng hệ thống đã giải quyết thành công các mục tiêu cốt lõi của dự án: tính sẵn sàng cao, kiểm soát chi phí và bảo mật dữ liệu sâu[cite: 5, 8, 10].
-- Bàn giao tài liệu hệ thống rõ ràng lập biểu đồ cho các đường dẫn định tuyến, cấu trúc serverless và các kiểm soát bảo mật[cite: 4, 5, 10].
-- Dọn dẹp kỹ lưỡng không gian làm việc AWS, đảm bảo không có chi phí ngoài ý muốn phát sinh sau khi dự án kết thúc[cite: 6].
+- Thiết lập một điểm quan sát bảo mật tập trung duy nhất thay thế cho các bảng điều khiển công cụ phân tán trước đây.
+- Khắc phục thành công tất cả các rủi ro lộ lọt mạng ở mức độ nghiêm trọng cao trước giai đoạn đánh giá cuối cùng.
+- Xác thực hệ thống giải quyết thành công các mục tiêu cốt lõi của dự án: tính sẵn sàng cao, kiểm soát chi phí và bảo mật dữ liệu chuyên sâu.
+- Bàn giao tài liệu hệ thống rõ ràng, vẽ sơ đồ các đường dẫn định tuyến, cấu trúc không máy chủ và các kiểm soát bảo mật.
+- Dọn dẹp hoàn toàn không gian làm việc AWS, đảm bảo không có phí bất ngờ phát sinh sau khi hoàn thành dự án.
 
-### Kế hoạch tuần tới
+### Kế hoạch cho tuần tiếp theo
 
-- Thuyết trình toàn bộ dự án Giám sát lãng phí năng lượng Smart Home trước hội đồng đánh giá[cite: 3, 5].
-- Hoàn thành các thủ ký xác nhận thực tập tốt nghiệp cuối cùng và phê duyệt chương trình[cite: 5].
+- Báo cáo và bảo vệ dự án Hệ thống giám sát lãng phí năng lượng nhà thông minh (Smart Home Energy Waste Monitoring) trước hội đồng đánh giá.
+- Hoàn thành các thủ tục phê duyệt thực tập tốt nghiệp và đánh giá chương trình cuối cùng.

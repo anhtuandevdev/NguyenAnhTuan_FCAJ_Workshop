@@ -1,6 +1,6 @@
 ---
-title: "Tuần 4: Nhật ký làm việc"
-date: 2026-06-22
+title: "Nhật ký công việc Tuần 4"
+date: 2026-05-08
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
@@ -8,29 +8,29 @@ pre: " <b> 1.4. </b> "
 
 ### Mục tiêu Tuần 4
 
-- Thiết kế hạ tầng mạng Amazon Virtual Private Cloud (VPC) mạnh mẽ, bảo mật và cô lập[cite: 5].
-- Cô lập các thành phần giao tiếp bên ngoài (public-facing) khỏi các cơ sở dữ liệu backend nội bộ giữa các Vùng sẵn sàng (AZ) riêng biệt[cite: 5].
-- Loại bỏ các lỗ hổng bảo mật phổ biến bằng cách chặn các điểm truy cập trực tiếp từ bên ngoài vào mạng nội bộ[cite: 5].
+- Thiết kế hạ tầng mạng Amazon Virtual Private Cloud (VPC) mạnh mẽ, an toàn và cô lập.
+- Cô lập các thành phần giao tiếp bên ngoài với các cơ sở dữ liệu backend nội bộ giữa các Vùng sẵn sàng (AZ) khác nhau.
+- Loại bỏ các lỗ hổng bảo mật phổ biến bằng cách xóa bỏ các điểm truy cập trực tiếp từ bên ngoài vào mạng riêng tư.
 
-### Các nhiệm vụ đã thực hiện trong tuần
+### Các tác vụ đã thực hiện trong tuần
 
-| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| Ngày | Công việc cụ thể | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 1 | Cấp phát một phân mạng lõi tùy chỉnh ban đầu sử dụng khối CIDR (Classless Inter-Domain Routing) chuyên dụng[cite: 5]. | 22/06/2026 | 22/06/2026 | VPC Networking Guide |
-| 2 | Phân chia hạ tầng mạng đối xứng qua các tầng sẵn sàng tách biệt thành các Subnet Công khai (Public) và Riêng tư (Private)[cite: 5]. | 23/06/2026 | 23/06/2026 | Subnet Planning Tools |
-| 3 | Triển khai một Internet Gateway (IGW) và ánh xạ các tuyến đường biên (border routes) ra ngoài Internet thông qua các bảng định tuyến công khai[cite: 5]. | 24/06/2026 | 24/06/2026 | AWS Routing Reference |
-| 4 | Cấp phát một NAT Gateway đàn hồi bên trong tầng công khai để làm cầu nối kết nối Internet chiều đi (outbound) cho các nút nội bộ[cite: 5]. | 25/06/2026 | 25/06/2026 | NAT Gateway Manual |
-| 5 | Thiết lập một EC2 Instance Connect Endpoint (EICE) để thực thi các lệnh terminal trực tiếp trên console mà không cần IP công khai[cite: 5]. | 26/06/2026 | 26/06/2026 | Systems Manager Docs |
+| 1 | Cấp phát sơ đồ mạng lõi tùy chỉnh ban đầu sử dụng khối CIDR (Classless Inter-Domain Routing) chuyên dụng. | 08/05/2026 | 08/05/2026 | Hướng dẫn mạng VPC |
+| 2 | Phân chia hạ tầng mạng đối xứng qua các tầng sẵn sàng độc lập thành các Phân vùng mạng công khai (Public Subnets) và riêng tư (Private Subnets). | 09/05/2026 | 09/05/2026 | Công cụ lập kế hoạch Subnet |
+| 3 | Triển khai Cổng Internet (Internet Gateway - IGW) và thiết lập bản đồ định tuyến biên ra các luồng công khai trên bảng định tuyến. | 10/05/2026 | 10/05/2026 | Tham chiếu định tuyến AWS |
+| 4 | Cấu hình một NAT Gateway có tính co giãn bên trong tầng công khai để làm cầu nối kết nối internet chiều đi cho các nút mạng riêng tư. | 11/05/2026 | 11/05/2026 | Hướng dẫn sử dụng NAT Gateway |
+| 5 | Thiết lập một Điểm cuối kết nối thực thể EC2 (EC2 Instance Connect Endpoint - EICE) để thực thi các lệnh terminal trực tiếp trên bảng điều khiển mà không cần IP công cộng. | 12/05/2026 | 12/05/2026 | Tài liệu Systems Manager |
 
 ### Kết quả đạt được trong Tuần 4
 
-- Thực hiện thành công việc phân tách mạng lớp, cung cấp các cơ chế bảo vệ Tính sẵn sàng cao (High Availability)[cite: 5].
-- Cấp quyền truy cập an toàn cho các cơ sở dữ liệu riêng tư để tải xuống các gói cập nhật bảo mật đi ra ngoài trong khi giữ các đường dẫn đi vào ẩn hoàn toàn[cite: 5].
-- Vô hiệu hóa các hộp biên bastion host truyền thống không an toàn, loại bỏ hoàn toàn các bề mặt quét mục tiêu trên cổng 22[cite: 5].
-- Thực hiện kiểm tra toàn diện các vết định tuyến, đạt điểm số hiệu năng 0% tỷ lệ mất gói tin[cite: 5].
-- Thiết lập các kênh VPC Flow Logs nền tảng để ghi lại các luồng theo dõi thời gian thực hướng về các CloudWatch Log Groups[cite: 5].
+- Thực thi thành công việc phân tách phân vùng mạng giúp cung cấp các cơ chế bảo vệ tính Sẵn sàng cao (High Availability).
+- Cấp quyền truy cập an toàn cho các cơ sở dữ liệu riêng tư để tải xuống các gói cập nhật bảo mật bên ngoài trong khi vẫn ẩn hoàn toàn các luồng kết nối đi vào.
+- Vô hiệu hóa mô hình máy chủ trung chuyển (bastion host) truyền thống kém an toàn, loại bỏ hoàn toàn các bề mặt quét mục tiêu trên cổng 22.
+- Tiến hành kiểm tra chi tiết các dấu vết định tuyến và đạt hiệu suất không mất mát gói tin (0% packet loss).
+- Thiết lập các kênh VPC Flow Logs cơ bản để thu thập dữ liệu theo dõi thời gian thực hướng tới các nhóm nhật ký CloudWatch (CloudWatch Log Groups).
 
-### Kế hoạch tuần tới
+### Kế hoạch cho tuần tiếp theo
 
-- Tạo lập các khung quản lý chi phí và ngưỡng chi tiêu đám mây.
-- Triển khai các mô hình ngân sách chi phí tài chính chi tiết sử dụng dashboard của AWS Budgets[cite: 3, 5].
+- Xây dựng các khung quản lý chi phí và ngưỡng chi tiêu đám mây.
+- Triển khai mô hình lập ngân sách tài chính chi tiết bằng bảng điều khiển AWS Budgets.

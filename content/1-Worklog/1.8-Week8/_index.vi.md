@@ -1,6 +1,6 @@
 ---
-title: "Tuần 8: Nhật ký làm việc"
-date: 2026-07-07
+title: "Nhật ký công việc Tuần 8"
+date: 2026-06-05
 weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
@@ -8,29 +8,29 @@ pre: " <b> 1.8. </b> "
 
 ### Mục tiêu Tuần 8
 
-- Thiết kế một quy trình quản lý sao lưu tự động tập trung giúp bảo vệ các kho lưu trữ dữ liệu khỏi thảm họa hỏng dữ liệu[cite: 7].
-- Điều phối các chính sách phục hồi sau thảm họa (disaster recovery) lập bản đồ cho các điểm trạng thái lưu trữ tệp[cite: 7].
-- Cấu hình các cấu trúc cảnh báo tức thời xác nhận việc hoàn thành các công việc sao lưu[cite: 7].
+- Thiết kế quy trình quản lý sao lưu tự động và tập trung để bảo vệ các kho lưu trữ dữ liệu khỏi sự cố hỏng hóc nghiêm trọng.
+- Xây dựng các chính sách khôi phục sau thảm họa (disaster recovery) ánh xạ các điểm trạng thái lưu trữ tệp.
+- Cấu hình các cấu trúc cảnh báo tức thời để xác nhận việc hoàn thành các tác vụ sao lưu.
 
-### Các nhiệm vụ đã thực hiện trong tuần
+### Các tác vụ đã thực hiện trong tuần
 
-| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| Ngày | Công việc cụ thể | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| 1 | Kích hoạt bảng điều khiển AWS Backup trung tâm để điều phối các mô hình bảo vệ snapshot[cite: 7]. | 20/07/2026 | 20/07/2026 | AWS Backup User Guide |
-| 2 | Xây dựng một Backup Plan tự động chuyên dụng để thiết lập các quy trình thời gian snapshot cho các mục tiêu lưu trữ quan trọng[cite: 7]. | 21/07/2026 | 21/07/2026 | Disaster Recovery Manual |
-| 3 | Cấu hình các thùng chứa Backup Vault mã hóa bảo mật nhằm khóa các bản ghi dữ liệu dưới các khóa an toàn nâng cao[cite: 7]. | 22/07/2026 | 22/07/2026 | KMS Encryption Guide |
-| 4 | Thực hiện các bài kiểm tra phục hồi thực tế diện rộng bằng cách tái cấu trúc các tập dữ liệu từ đầu sử dụng các điểm sao lưu lịch sử[cite: 7]. | 23/07/2026 | 23/07/2026 | Data Restoration Tests |
-| 5 | Tích hợp một đường truyền cảnh báo bất đồng bộ sử dụng Amazon SNS để gửi email nhật ký hoàn thành sao lưu cho quản trị viên[cite: 7]. | 24/07/2026 | 24/07/2026 | Amazon SNS Publisher |
+| 1 | Kích hoạt bảng điều khiển AWS Backup trung tâm để phối hợp các mô hình bảo vệ ảnh chụp nhanh (snapshot). | 05/06/2026 | 05/06/2026 | Hướng dẫn sử dụng AWS Backup |
+| 2 | Xây dựng Kế hoạch sao lưu (Backup Plan) tự động chuyên dụng, lập lịch trình thời gian chụp ảnh nhanh cho các mục tiêu lưu trữ quan trọng. | 06/06/2026 | 06/06/2026 | Cẩm nang khôi phục sau thảm họa |
+| 3 | Cấu hình các thùng chứa Backup Vault được mã hóa an toàn, khóa các bản ghi dữ liệu dưới các khóa bảo mật nâng cao. | 07/06/2026 | 07/06/2026 | Hướng dẫn mã hóa KMS |
+| 4 | Tiến hành kiểm thử khôi phục trực tiếp trên diện rộng bằng cách tái cấu trúc các tập dữ liệu từ đầu bằng các điểm sao lưu lịch sử. | 08/06/2026 | 08/06/2026 | Kiểm thử khôi phục dữ liệu |
+| 5 | Tích hợp đường ống cảnh báo bất đồng bộ bằng Amazon SNS để gửi email nhật ký hoàn thành sao lưu cho quản trị viên. | 09/06/2026 | 09/06/2026 | Trình xuất bản Amazon SNS |
 
 ### Kết quả đạt được trong Tuần 8
 
-- Loại bỏ hoàn toàn các tác vụ thủ công tẻ nhạt của con người bằng cách triển khai các kế hoạch lập lịch sao lưu tự động cấu hình một lần[cite: 7].
-- Xác minh các mục tiêu độ tin cậy dữ liệu kinh doanh vận hành bằng cách khôi phục thành công các tệp văn bản bị xóa[cite: 7].
-- Bảo vệ các bản sao snapshot cơ sở dữ liệu lịch sử sử dụng các tầng mã hóa phần cứng được quản lý[cite: 7].
-- Thiết lập các email trạng thái tức thời thông báo cho các kỹ sư về bất kỳ sự tạm dừng đột xuất nào của script[cite: 7].
-- Tạo lập các tài liệu tuân thủ mạnh mẽ cho các chính sách lưu trữ giữ lại dữ liệu của dự án[cite: 7].
+- Loại bỏ hoàn toàn các tác vụ thủ công tẻ nhạt bằng cách triển khai các kế hoạch lập lịch sao lưu tự động theo cơ chế thiết lập một lần.
+- Xác minh các mục tiêu về tính tin cậy của dữ liệu vận hành bằng cách khôi phục thành công các tệp văn bản đã bị xóa.
+- Bảo mật các bản sao chụp nhanh cơ sở dữ liệu lịch sử bằng cách sử dụng các tầng mã hóa phần cứng được quản lý.
+- Thiết lập email trạng thái tức thời để thông báo cho các kỹ sư về bất kỳ sự cố dừng phân phối tập lệnh không mong muốn nào.
+- Tạo tài liệu tuân thủ mạnh mẽ cho các chính sách giữ lại dữ liệu của dự án.
 
-### Kế hoạch tuần tới
+### Kế hoạch cho tuần tiếp theo
 
-- Đưa vào sử dụng các chiến lược dán nhãn định danh tài nguyên (resource labeling) trên toàn bộ triển khai.
-- Tích hợp các nhóm phân bổ theo chương trình sử dụng AWS Resource Groups và các tiêu chí gắn Thẻ (Tagging) thống nhất[cite: 8].
+- Giới thiệu các chiến lược gắn nhãn nhận dạng tài nguyên trong toàn bộ quá trình triển khai.
+- Tích hợp việc nhóm phân bổ theo lập trình bằng cách sử dụng AWS Resource Groups và các tiêu chí Gắn thẻ (Tagging) thống nhất.
